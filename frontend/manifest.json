@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Chat Bot",
+  "version": "0.1.0",
+  "description": "Chat with a bot about the current YouTube video.",
+  "host_permissions": [
+    "http://localhost:8000/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
