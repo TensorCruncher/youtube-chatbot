@@ -1,0 +1,10 @@
+langchain_text_splitters
+langchain-core
+langchain-community
+langchain-openai
+faiss-cpu
+youtube-transcript-api
+python-dotenv
+fastapi
+slowapi
+uvicorn
