@@ -31,5 +31,12 @@ You can ask for:
 * LangSmith
 * FAISS
 
+# Scope for improvement
+* Youtube SPA behaviour needs to accounted for further, specifically playlist video change behaviour
+* Hit enter to send message and other quality of life improvements
+* Persistence of chats
+* User accounts
+
 # Attribution
 Icon for chrome extension from: <a href="https://www.flaticon.com/free-icons/chatbot" title="chatbot icons">Chatbot icons created by Freepik - Flaticon</a>
+
