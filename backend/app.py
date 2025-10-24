@@ -30,8 +30,8 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["chrome-extension://pjolcmgepmllfkicompfklfhdobbmiab"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -48,7 +48,7 @@ class AskBody(BaseModel):
     question: str
 
 @app.post("/ask")
-@limiter.limit("100/hour")
+@limiter.limit("20/hour")
 def ask(request: Request, video_id: str, body: AskBody):
     ingest_transcript = ingest(video_id, _loaded_indexes, _locks, STORE_DIR)
     
