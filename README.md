@@ -17,13 +17,13 @@ You can ask for:
 
 # Tech
 
-Frontend:
+## Frontend:
 * Deployed to Chrome webstore (**Pending**)
 * HTML (injected via content.js file)
 * CSS
 * Javascript
 
-Backend:
+## Backend:
 * Hosted on Render
 * Python
 * FastAPI
@@ -31,3 +31,5 @@ Backend:
 * LangSmith
 * FAISS
 
+# Attribution
+Icon for chrome extension from: <a href="https://www.flaticon.com/free-icons/chatbot" title="chatbot icons">Chatbot icons created by Freepik - Flaticon</a>
