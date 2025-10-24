@@ -3,6 +3,7 @@ import os
 from typing import Dict, Any
 
 from youtube_transcript_api import YouTubeTranscriptApi, _errors
+from youtube_transcript_api.proxies import WebshareProxyConfig
 from fastapi import HTTPException
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -56,7 +57,12 @@ def put_in_ram(video_id: str, index: Any, cache: Dict[str, Any]) -> None:
 
 def fetch_transcript(video_id: str) -> str:
     try:
-      ytt_api = YouTubeTranscriptApi()
+      proxy_username = os.getenv("WEBSHARE_USERNAME")
+      proxy_password = os.getenv("WEBSHARE_PASSWORD")
+      ytt_api = YouTubeTranscriptApi(proxy_config=WebshareProxyConfig(
+        proxy_username=proxy_username,
+        proxy_password=proxy_password,
+    ))
       transcript_list = ytt_api.fetch(video_id, languages=["en"]).to_raw_data()
 
       transcript = " ".join(chunk["text"] for chunk in transcript_list)
