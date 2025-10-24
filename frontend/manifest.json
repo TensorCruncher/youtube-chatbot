@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Chat with a bot about the current YouTube video.",
   "host_permissions": [
-    "http://localhost:8000/*"
+    "https://youtube-chatbot-backend.onrender.com/*"
   ],
 
   "background": {

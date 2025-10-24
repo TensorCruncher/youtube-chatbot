@@ -1,5 +1,5 @@
 import os
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
@@ -49,7 +49,7 @@ class AskBody(BaseModel):
 
 @app.post("/ask")
 @limiter.limit("100/hour")
-def ask(video_id: str, body: AskBody):
+def ask(request: Request, video_id: str, body: AskBody):
     ingest_transcript = ingest(video_id, _loaded_indexes, _locks, STORE_DIR)
     
     question = body.question

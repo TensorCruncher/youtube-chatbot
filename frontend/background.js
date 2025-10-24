@@ -5,7 +5,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         const urlObj = new URL(msg.videoUrl);
         const videoId = urlObj.searchParams.get("v");
 
-        const res = await fetch(`http://127.0.0.1:8000/ask?video_id=${encodeURIComponent(videoId)}`, {
+        const res = await fetch(`https://youtube-chatbot-backend.onrender.com/ask?video_id=${encodeURIComponent(videoId)}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
