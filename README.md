@@ -15,6 +15,11 @@ You can ask for:
 * First message can take some time to get a response since the transcript for the video is being fetched and embdedded.
 * Some times APIs and processes can randomly cause absurdly long times for reply (~ 1 minute). Just message again (assuming it's not the first message, in which case it just needs about 5s to reply and then usually 1-2s per reply).
 
+# Drawbacks
+The main issue is around detecting navigation changes in the YouTube single page application. The code I had for this worked locally with some exceptions, but after downloading the extension from the chrome webstore, even the number of issues has increased. This includes the chat window not refreshing on navigating to a different video. 
+
+TBH, I was too exhausted to go back and change things at this point, especially since it would require submitting a new version to the wbestore.
+
 # Tech
 
 ## Frontend:
@@ -40,5 +45,6 @@ You can ask for:
 
 # Attribution
 Icon for chrome extension from: <a href="https://www.flaticon.com/free-icons/chatbot" title="chatbot icons">Chatbot icons created by Freepik - Flaticon</a>
+
 
 
