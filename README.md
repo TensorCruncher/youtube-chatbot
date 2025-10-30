@@ -20,6 +20,8 @@ The main issue is around detecting navigation changes in the YouTube single page
 
 TBH, I was too exhausted to go back and change things at this point, especially since it would require submitting a new version to the wbestore.
 
+As a temporary workaround, refresh the page for the chat window to appear / refresh.
+
 # Tech
 
 ## Frontend:
@@ -45,6 +47,7 @@ TBH, I was too exhausted to go back and change things at this point, especially 
 
 # Attribution
 Icon for chrome extension from: <a href="https://www.flaticon.com/free-icons/chatbot" title="chatbot icons">Chatbot icons created by Freepik - Flaticon</a>
+
 
 
 
